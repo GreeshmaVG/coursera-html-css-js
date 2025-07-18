@@ -1,0 +1,85 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.menu-box {
+  float: left;
+  position: relative;
+  border: 3px solid black;
+  background-color: #ccc;
+  padding: 20px;
+  margin: 10px;
+  min-height: 200px;
+}
+
+.menu-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 15px;
+  border: 3px solid black;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+/* Specific title background colors */
+.chicken {
+  background-color: #f3a7a7; /* Light pink */
+}
+
+.beef {
+  background-color: #d9534f; /* Red */
+  color: white;
+}
+
+.sushi {
+  background-color: #f5e79e; /* Yellow */
+}
+
+/* --- Layout breakpoints --- */
+
+/* Mobile: <= 767px */
+@media (max-width: 767px) {
+  .menu-box {
+    width: 100%;
+    clear: both;
+  }
+}
+
+/* Tablet: 768px - 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .menu .section {
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .menu .section:nth-child(3) {
+    flex: 1 1 100%;
+  }
+}
+
+/* Desktop: >= 992px */
+@media (min-width: 992px) {
+  .menu-box {
+    width: 30%;
+  }
+}
